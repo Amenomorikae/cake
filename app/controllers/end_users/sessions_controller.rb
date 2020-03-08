@@ -4,10 +4,10 @@ class EndUsers::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
-   def new
-     @end_users = EndUser.all
-     @end_user = EndUser.new
-   end
+   #def new
+     #@end_users = EndUser.all
+     #@end_user = EndUser.new
+   #end
 
   # POST /resource/sign_in
   # def create
@@ -15,10 +15,10 @@ class EndUsers::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-   def destroy
-    reset_session
-    redirect_to new_admin_session_path
-   end
+   #def destroy
+    #reset_session
+    #redirect_to new_admin_session_path
+   #end
 
   # protected
 

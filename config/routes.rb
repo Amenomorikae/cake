@@ -19,10 +19,10 @@ Rails.application.routes.draw do
     resources :items
   end
 
-  resources :end_users,only: [ :show, :edit, :update, :confirm]
+  resource :end_users,only: [ :show, :edit, :update, :confirm]
 
   resources :tops,only: [:index]
 
-  root :to => 'top#index'
+  root :to => 'tops#index'
 
 end
