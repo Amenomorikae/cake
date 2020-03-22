@@ -1,0 +1,8 @@
+<h1>User info</h1>
+      <div>
+        <%= form_for(@end_user) do |f| %>
+      	<h4>email</h4>
+      	<p><%= f.text_area :email %></p>
+        <%= f.submit ‘Update User’ %>
+        <% end %>
+      </div>
