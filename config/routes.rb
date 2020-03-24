@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+
+  namespace :admins do
+    resources :end_users
+    resource :items
+  end
+
   devise_for :admins,controllers: {
   sessions:      'admins/sessions',
   passwords:     'admins/passwords',
@@ -8,12 +14,7 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  namespace :admins do
-  	resources :end_users
-    resources :items
-  end
-
-  resource :end_users,only: [ :show, :edit, :update, :confirm]
+  resource :end_users,only: [ :show, :edit, :update, :confirm, :destroy]
 
   devise_for :end_users,controllers: {
   sessions:      'end_users/sessions',

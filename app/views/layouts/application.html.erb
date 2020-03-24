@@ -14,6 +14,7 @@
         <% if end_user_signed_in? %>
            <a href="#">my_page</a>
            <a href="#">cart</a>
+           <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
         <% elsif admin_signed_in? %>
            <a href="#">受注一覧</a>
            <a href="#">商品登録</a>
