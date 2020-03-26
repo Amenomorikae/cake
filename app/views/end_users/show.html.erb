@@ -1,15 +1,17 @@
-<h1>my_page</h1>
-          <table class=“table”>
-            <tr>
-              <th>name</th>
-              <td><%= current_end_user.name %></td>
-            </tr>
-            <tr>
-              <th>email</th>
-              <td><%= current_end_user.email %></td>
-            </tr>
-          </table>
-          <div class=“row”>
-                <%= link_to "edit", edit_end_users_path %>
-                <%= link_to "delete", end_users_path(current_end_user.id), method: :delete, data: {confirm: "削除しますか？" } %>
-          </div>
+<div class="container">
+  <h1>my_page</h1>
+  <table class=“table”>
+    <tr>
+      <th>name</th>
+      <td><%= current_end_user.name %></td>
+    </tr>
+    <tr>
+      <th>email</th>
+      <td><%= current_end_user.email %></td>
+    </tr>
+  </table>
+  <div class=“row”>
+        <%= link_to "edit", edit_end_users_path %>
+        <%= link_to "delete", end_users_path(current_end_user.id), method: :delete, data: {confirm: "削除しますか？" } %>
+  </div>
+</div>
