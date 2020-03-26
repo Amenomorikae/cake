@@ -3505,3 +3505,1525 @@ Processing by EndUsers::SessionsController#new as HTML
 Completed 200 OK in 70ms (Views: 69.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-24 08:22:59 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (1.2ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 405ms (Views: 390.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/end_users/sign_up" for 10.0.2.2 at 2020-03-24 08:29:54 +0000
+Processing by EndUsers::RegistrationsController#new as HTML
+  Rendering end_users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered end_users/shared/_links.html.erb (0.8ms)
+  Rendered end_users/registrations/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-24 08:29:56 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (1.4ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 64ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-24 08:30:01 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (0.7ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2020-03-24 08:30:08 +0000
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 59ms (Views: 49.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/admins/sign_in" for 10.0.2.2 at 2020-03-24 08:30:15 +0000
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ahnsSKsy/IFN5iqohQ8N6rLX5mIXhOrPC5O+maN7hvRangpgsZS0rUvEud8UEdQv1yz/PBXvsxn2QXgoVK2j4g==", "admin"=>{"email"=>"aa@aa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "aa@aa"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 9ms (ActiveRecord: 2.2ms)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ahnsSKsy/IFN5iqohQ8N6rLX5mIXhOrPC5O+maN7hvRangpgsZS0rUvEud8UEdQv1yz/PBXvsxn2QXgoVK2j4g==", "admin"=>{"email"=>"aa@aa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.7ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 170ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-24 08:31:35 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (0.7ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_up" for 10.0.2.2 at 2020-03-24 08:31:36 +0000
+Processing by EndUsers::RegistrationsController#new as HTML
+  Rendering end_users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered end_users/shared/_links.html.erb (1.1ms)
+  Rendered end_users/registrations/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/end_users" for 10.0.2.2 at 2020-03-24 08:32:07 +0000
+Processing by EndUsers::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84xDkVTM9Gom+eaf1ovfUTLxh2YzRwy3Epy+m4cxwq5km55txOle7CJ1HqgwXu9U3Lh6AiV2B8m/WG8m+hwB/g==", "end_user"=>{"name"=>"ff", "email"=>"ff@ff", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEndUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = ? AND "end_users"."deleted_at" IS NULL LIMIT ?[0m  [["email", "ff@ff"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEndUser Create (5.5ms)[0m  [1m[32mINSERT INTO "end_users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "ff@ff"], ["encrypted_password", "$2a$11$E9RFou5Fb0eL.zGmcgcE3ed3PQg.2QyH3pot6gOLIA1AhYFl1WSEq"], ["name", "ff"], ["created_at", "2020-03-24 08:32:07.306585"], ["updated_at", "2020-03-24 08:32:07.306585"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/end_users
+Completed 302 Found in 141ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/end_users" for 10.0.2.2 at 2020-03-24 08:32:07 +0000
+Processing by EndUsersController#show as HTML
+  Rendering end_users/show.html.erb within layouts/application
+  [1m[36mEndUser Load (0.8ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/end_users/show.html.erb:5
+  Rendered end_users/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 41ms (Views: 35.6ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/admins/sign_out" for 10.0.2.2 at 2020-03-24 08:32:10 +0000
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QVsWfDLIv4pI6gZWcqgZcceuGVl9FkuHcJPFC3CIWe1x3PBUKG73pk7IlSHjtsC0olUAB399ElGNQQO6h158+w=="}
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/end_users/sign_in
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-24 08:32:10 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (1.1ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/end_users/sign_in" for 10.0.2.2 at 2020-03-24 08:32:16 +0000
+Processing by EndUsers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UzX/zrVPIeowEfTl/0GGaIvk2eLw0n7QJJTUvoE5ylZPAJyKmNEP0zbtDm5UKTOGBeFO7NrQ5gGu70DntGKjmw==", "end_user"=>{"email"=>"ff@ff", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."email" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["email", "ff@ff"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/end_users
+Completed 302 Found in 119ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/end_users" for 10.0.2.2 at 2020-03-24 08:32:16 +0000
+Processing by EndUsersController#show as HTML
+  Rendering end_users/show.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/end_users/show.html.erb:5
+  Rendered end_users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/admins/sign_out" for 10.0.2.2 at 2020-03-24 08:35:41 +0000
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wm8CPhO4vGyACo3znZQOI4tK9pDg9r+H9s/skX/buip6IKzGLdzJtI35Yd3IDdqipVXglc5ga11WNihHb0ZKow=="}
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/end_users/sign_in
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-24 08:35:41 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (0.7ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2020-03-24 08:35:51 +0000
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 10.0.2.2 at 2020-03-24 08:35:59 +0000
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IOWeRrg4TpBgD2xb/ZiO8D6cfF4jwdhZtDahfFK2WVVUk7kancn+eZtXq6jxUukx1GozIP4p2L2+x9Gi7y1JNA==", "admin"=>{"email"=>"aa@aa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "aa@aa"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 6ms (ActiveRecord: 1.1ms)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IOWeRrg4TpBgD2xb/ZiO8D6cfF4jwdhZtDahfFK2WVVUk7kancn+eZtXq6jxUukx1GozIP4p2L2+x9Gi7y1JNA==", "admin"=>{"email"=>"aa@aa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.8ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 164ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 10.0.2.2 at 2020-03-24 08:36:28 +0000
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TGaVvvsEFXRILwu6Llp+RJyL1DCzYjpZj+g4z7X/dns4ELLi3vWlnbN3zEkikBmFdn2bTm6KOr2FGUgRCGRmGg==", "admin"=>{"email"=>"aa@aa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "aa@aa"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.9ms)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TGaVvvsEFXRILwu6Llp+RJyL1DCzYjpZj+g4z7X/dns4ELLi3vWlnbN3zEkikBmFdn2bTm6KOr2FGUgRCGRmGg==", "admin"=>{"email"=>"aa@aa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.7ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 154ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-03-24 08:38:29 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TopsController#index as HTML
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 277ms (Views: 267.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_up" for 10.0.2.2 at 2020-03-24 08:38:32 +0000
+Processing by EndUsers::RegistrationsController#new as HTML
+  Rendering end_users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered end_users/shared/_links.html.erb (0.8ms)
+  Rendered end_users/registrations/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 110ms (Views: 85.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-24 08:38:33 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (1.1ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 92ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_up" for 10.0.2.2 at 2020-03-24 08:38:34 +0000
+Processing by EndUsers::RegistrationsController#new as HTML
+  Rendering end_users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered end_users/shared/_links.html.erb (1.1ms)
+  Rendered end_users/registrations/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 83ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-24 08:38:36 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (1.7ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAdmin Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "aa@aa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mAdmin Create (3.9ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "aa@aa"], ["encrypted_password", "$2a$11$DWcPWi8cOBZIzfcNhj55yeFsSAlbiegp13eByDtUnGrzjmLZpkTOa"], ["created_at", "2020-03-24 10:03:27.129185"], ["updated_at", "2020-03-24 10:03:27.129185"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+Started GET "/admins/sign_in" for 10.0.2.2 at 2020-03-24 10:03:58 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 381ms (Views: 367.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/admins/sign_in" for 10.0.2.2 at 2020-03-24 10:04:10 +0000
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8g5rT7nC8GjYlJ6JOXe6OxCmIkhfh36IGOmlfvfOs8+GeEwTnDNAgSPMWXo1vd36+lBtNoJvfmwSGNWgSlWjrg==", "admin"=>{"email"=>"aa@aa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (2.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "aa@aa"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins/items
+Completed 302 Found in 122ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-03-24 10:04:10 +0000
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Admins::ItemsController):
+  
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/items" for 10.0.2.2 at 2020-03-24 14:34:49 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/admins/items"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/sign_in" for 10.0.2.2 at 2020-03-24 14:38:59 +0000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SessionsController#new as HTML
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins/items
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-03-24 14:39:01 +0000
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  Rendered admins/items/index.html.erb within layouts/application (1.0ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 371ms (Views: 363.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-03-25 05:42:49 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  Rendered admins/items/index.html.erb within layouts/application (1.7ms)
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 728ms (Views: 709.7ms | ActiveRecord: 4.2ms)
+
+
+Started DELETE "/admins/sign_out" for 10.0.2.2 at 2020-03-25 05:42:56 +0000
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5o1v6fuP43GL5I/w4ZOylPCN9F1TiMFA9aiK6HPeq4rxTNxplRi46ZmU5cE5oYKGt+ZyyfbcriIwmvzM8CSpzg=="}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/end_users/sign_in
+Completed 302 Found in 26ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-25 05:42:56 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (1.0ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 107ms (Views: 96.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admins/sign_in" for 10.0.2.2 at 2020-03-25 05:43:05 +0000
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (1.4ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 125ms (Views: 123.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 10.0.2.2 at 2020-03-25 05:43:12 +0000
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"33+vztMqQNM1QTSvrCXuYrID/J16nvmcEyyLRqGmwxcc1qlWIUMKWbTJUgoEEaa9InfWGQHwtmKerKB1T3luRg==", "admin"=>{"email"=>"aa@aa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "aa@aa"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins/items
+Completed 302 Found in 147ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-03-25 05:43:12 +0000
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  Rendered admins/items/index.html.erb within layouts/application (0.4ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 05:43:15 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  Rendered admins/end_users/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/cake/app/views/admins/end_users/index.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/admins/end_users/index.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 05:44:17 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  Rendered admins/end_users/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/cake/app/views/admins/end_users/index.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/admins/end_users/index.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 05:45:42 +0000
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.8ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:12
+  Rendered admins/end_users/index.html.erb within layouts/application (9.3ms)
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 347ms (Views: 328.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:16:17 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.8ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:12
+  Rendered admins/end_users/index.html.erb within layouts/application (10.0ms)
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:19
+Completed 200 OK in 9638ms (Views: 9620.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:18:43 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.9ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:12
+  Rendered admins/end_users/index.html.erb within layouts/application (3.1ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 177ms (Views: 165.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:18:58 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:12
+  Rendered admins/end_users/index.html.erb within layouts/application (2.8ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 124ms (Views: 115.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:20:03 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.7ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:12
+  Rendered admins/end_users/index.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 120ms (Views: 111.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:20:04 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.3ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:12
+  Rendered admins/end_users/index.html.erb within layouts/application (2.3ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 112ms (Views: 106.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:20:45 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:12
+  Rendered admins/end_users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 102ms (Views: 96.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:20:48 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:12
+  Rendered admins/end_users/index.html.erb within layouts/application (3.0ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 104ms (Views: 97.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:22:06 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.5ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 97ms (Views: 90.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:22:50 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (1.1ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (4.9ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 110ms (Views: 100.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:26:20 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:14
+  Rendered admins/end_users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 113ms (Views: 106.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:27:36 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (1.8ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (8.0ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 146ms (Views: 138.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:29:04 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.7ms)
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2511ms (Views: 2504.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:31:33 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (1.3ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (5.1ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 126ms (Views: 117.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:33:57 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.9ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 143ms (Views: 134.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:34:06 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.7ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 123ms (Views: 116.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:34:49 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.0ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 156ms (Views: 149.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:34:50 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.8ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.4ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 152ms (Views: 143.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:34:57 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.8ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 91ms (Views: 85.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:36:06 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.4ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 89ms (Views: 84.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:36:27 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.3ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 94ms (Views: 88.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:36:45 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.6ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 84ms (Views: 79.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:39:01 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.3ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.3ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 3375ms (Views: 3367.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:39:07 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.4ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 138ms (Views: 132.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:39:38 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.7ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.1ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2993ms (Views: 2988.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:41:05 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.6ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 3166ms (Views: 3157.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:43:23 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (1.3ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (4.5ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 126ms (Views: 117.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:43:28 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.1ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 97ms (Views: 91.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:44:06 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.7ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (4.2ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 96ms (Views: 89.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:44:08 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.5ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 84ms (Views: 79.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:55:11 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (1.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 3233ms (Views: 3221.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:56:31 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 872ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (bad URI(is not URI?): kirin-Regular (1).ttf):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3388860701855825658_70051576237620'
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 06:57:48 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.2ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 135ms (Views: 126.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-25 07:00:17 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 2316ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (bad URI(is not URI?): kirin-Regular (1).ttf):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3388860701855825658_70051573467360'
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:28:22 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (1.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (17.8ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 8348ms (Views: 8331.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:31:01 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.8ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (4.2ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2314ms (Views: 2306.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:31:45 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 125ms (Views: 116.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:32:00 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.4ms)
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 139ms (Views: 130.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:34:12 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.4ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2584ms (Views: 2576.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:34:45 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2734ms (Views: 2725.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:35:15 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.0ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2151ms (Views: 2144.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:36:58 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.2ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2420ms (Views: 2411.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:37:39 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (1.1ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2427ms (Views: 2419.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:39:10 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.7ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 101ms (Views: 94.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:40:27 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.2ms)
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2790ms (Views: 2780.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:41:35 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (5.3ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 2532ms (Views: 2524.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:41:38 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.0ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 128ms (Views: 121.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:46:51 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.1ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 119ms (Views: 110.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:47:39 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.2ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 134ms (Views: 123.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:49:50 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (9.6ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 177ms (Views: 171.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:49:54 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.7ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 122ms (Views: 115.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:50:00 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.1ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 107ms (Views: 99.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:54:55 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (4.6ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:38
+Completed 200 OK in 155ms (Views: 147.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:55:26 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.3ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.3ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 124ms (Views: 118.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:56:23 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.7ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 2444ms (Views: 2432.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:56:36 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.3ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 2370ms (Views: 2364.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:57:50 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (1.8ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (4.9ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 93ms (Views: 85.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:58:21 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.2ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 118ms (Views: 112.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:58:43 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.3ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.3ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 136ms (Views: 128.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:58:57 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.1ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 115ms (Views: 108.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:59:23 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.3ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.5ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 113ms (Views: 107.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:59:33 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.4ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 114ms (Views: 106.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 01:59:59 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.7ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 94ms (Views: 87.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:01:34 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.8ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 143ms (Views: 136.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:01:42 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.3ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.8ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 82ms (Views: 76.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:03:04 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.7ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (4.2ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 2516ms (Views: 2509.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:05:00 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.6ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 149ms (Views: 141.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:05:03 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (1.9ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 105ms (Views: 98.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:05:16 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.2ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 112ms (Views: 104.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:05:22 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.3ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.0ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 112ms (Views: 106.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:09:19 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.9ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 2663ms (Views: 2654.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:10:57 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.9ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 2419ms (Views: 2409.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:13:44 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.7ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 101ms (Views: 94.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:15:24 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.3ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 2287ms (Views: 2278.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:16:00 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (3.4ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 2304ms (Views: 2297.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/end_users" for 10.0.2.2 at 2020-03-26 02:16:48 +0000
+Processing by Admins::EndUsersController#index as HTML
+  Rendering admins/end_users/index.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT "end_users".* FROM "end_users"[0m
+  ↳ app/views/admins/end_users/index.html.erb:13
+  Rendered admins/end_users/index.html.erb within layouts/application (2.4ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 2289ms (Views: 2280.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-03-26 02:55:52 +0000
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  Rendered admins/items/index.html.erb within layouts/application (0.3ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 127ms (Views: 121.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-03-26 02:56:23 +0000
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  Rendered admins/items/index.html.erb within layouts/application (0.3ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:35
+Completed 200 OK in 167ms (Views: 158.0ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/admins/sign_out" for 10.0.2.2 at 2020-03-26 02:57:23 +0000
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4/gS2mort7FvJ5VH0OOpC1NNSr03RACDqajmQeGzcCjCMt6mrUeQb8P+giqmPq/9lPxD3VCNqtoIKClmcujo+g=="}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/end_users/sign_in
+Completed 302 Found in 23ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-26 02:57:23 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (0.9ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 122ms (Views: 120.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-26 02:59:04 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (1.4ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 101ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_up" for 10.0.2.2 at 2020-03-26 02:59:13 +0000
+Processing by EndUsers::RegistrationsController#new as HTML
+  Rendering end_users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered end_users/shared/_links.html.erb (0.9ms)
+  Rendered end_users/registrations/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 125ms (Views: 122.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/end_users" for 10.0.2.2 at 2020-03-26 02:59:23 +0000
+Processing by EndUsers::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"teGbtSlsNKDrxEDKPRHNSgsIFD1f80KfhdbgWtI6Vl2xbdaAJS1OARbH9YlRdmew+ygWrb1S5ITwg7PSBm9G0A==", "end_user"=>{"name"=>"dd", "email"=>"dd@dd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEndUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = ? AND "end_users"."deleted_at" IS NULL LIMIT ?[0m  [["email", "dd@dd"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mEndUser Create (3.9ms)[0m  [1m[32mINSERT INTO "end_users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "dd@dd"], ["encrypted_password", "$2a$11$fZ3W3zjljUoI/rA2w1QYKehivFUPWx0wFs5o96ZKSiIpy1vpPZxYm"], ["name", "dd"], ["created_at", "2020-03-26 02:59:23.498317"], ["updated_at", "2020-03-26 02:59:23.498317"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/end_users
+Completed 302 Found in 148ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/end_users" for 10.0.2.2 at 2020-03-26 02:59:23 +0000
+Processing by EndUsersController#show as HTML
+  Rendering end_users/show.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/end_users/show.html.erb:6
+  Rendered end_users/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 104ms (Views: 99.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/end_users/edit" for 10.0.2.2 at 2020-03-26 02:59:28 +0000
+Processing by EndUsersController#edit as HTML
+  Rendering end_users/edit.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/end_users/edit.html.erb:3
+  Rendered end_users/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 98ms (Views: 91.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/end_users/edit" for 10.0.2.2 at 2020-03-26 03:00:11 +0000
+Processing by EndUsersController#edit as HTML
+  Rendering end_users/edit.html.erb within layouts/application
+  [1m[36mEndUser Load (0.3ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/end_users/edit.html.erb:4
+  Rendered end_users/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 100ms (Views: 94.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/end_users" for 10.0.2.2 at 2020-03-26 03:00:14 +0000
+Processing by EndUsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K8j16wZTW2iOgT3bidH5GLsUq1Tfe6Gsp00Qz/7YX05aCoSV6qecVADFgi/siLWFgwQkn2eNHU6wp7lCS9Phcg==", "end_user"=>{"email"=>"dd@dd"}, "commit"=>"Update User"}
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/end_users_controller.rb:9
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/end_users_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/end_users_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/end_users_controller.rb:10
+Redirected to http://localhost:3000/end_users
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/end_users" for 10.0.2.2 at 2020-03-26 03:00:14 +0000
+Processing by EndUsersController#show as HTML
+  Rendering end_users/show.html.erb within layouts/application
+  [1m[36mEndUser Load (0.4ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/end_users/show.html.erb:6
+  Rendered end_users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 102ms (Views: 99.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/end_users" for 10.0.2.2 at 2020-03-26 03:00:18 +0000
+Processing by EndUsersController#show as HTML
+  Rendering end_users/show.html.erb within layouts/application
+  [1m[36mEndUser Load (0.5ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/end_users/show.html.erb:6
+  Rendered end_users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 93ms (Views: 89.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/end_users" for 10.0.2.2 at 2020-03-26 03:00:20 +0000
+Processing by EndUsersController#show as HTML
+  Rendering end_users/show.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/end_users/show.html.erb:6
+  Rendered end_users/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 103ms (Views: 97.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/end_users" for 10.0.2.2 at 2020-03-26 03:00:22 +0000
+Processing by EndUsersController#show as HTML
+  Rendering end_users/show.html.erb within layouts/application
+  [1m[36mEndUser Load (0.6ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/end_users/show.html.erb:6
+  Rendered end_users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 111ms (Views: 105.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/end_users" for 10.0.2.2 at 2020-03-26 03:00:33 +0000
+Processing by EndUsersController#show as HTML
+  Rendering end_users/show.html.erb within layouts/application
+  [1m[36mEndUser Load (0.9ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/end_users/show.html.erb:6
+  Rendered end_users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 105ms (Views: 99.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/admins/sign_out" for 10.0.2.2 at 2020-03-26 03:00:44 +0000
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LJbzq/XArPKEdD8t7RwAxrvQrXxvRLUiEDyIHHs1v+hdVILVGTRrzgowgNmIRUxbg8Ait9eyCcAH1iGRzj4B1A=="}
+  [1m[36mEndUser Load (0.8ms)[0m  [1m[34mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."deleted_at" IS NULL AND "end_users"."id" = ? ORDER BY "end_users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/end_users/sign_in
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-26 03:00:44 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (0.8ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_in" for 10.0.2.2 at 2020-03-26 03:01:00 +0000
+Processing by EndUsers::SessionsController#new as HTML
+  Rendering end_users/sessions/new.html.erb within layouts/application
+  Rendered end_users/shared/_links.html.erb (0.9ms)
+  Rendered end_users/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/end_users/sign_up" for 10.0.2.2 at 2020-03-26 03:01:01 +0000
+Processing by EndUsers::RegistrationsController#new as HTML
+  Rendering end_users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered end_users/shared/_links.html.erb (0.8ms)
+  Rendered end_users/registrations/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 138ms (Views: 135.6ms | ActiveRecord: 0.0ms)
+
+
