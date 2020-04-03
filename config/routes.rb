@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 }
 
   namespace :admins do
+    resources :items,only: [:index, :new, :create, :update]
     resources :end_users
-    resources :items,only: [:index]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -22,7 +22,10 @@ Rails.application.routes.draw do
   registrations: 'end_users/registrations'
 }
 
-  resources :tops,only: [:index]
+  namespace :end_users do
+   resources :tops,only: [:index]
+   resources :items
+  end
 
   root :to => 'tops#index'
 
