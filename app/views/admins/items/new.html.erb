@@ -1,0 +1,15 @@
+<div class="container">
+	<h1>商品 新規登録画面</h1>
+	<%= form_for(@item, url: admins_items_path) do |f| %>
+	    <h4>商品名</h4>
+	    <p><%= f.text_field :name %></p>
+	    <h4>税抜価格</h4>
+	  	<p><%= f.text_field :price %></p>
+	  	<h4>ジャンル</h4>
+	  	<p><%= f.select :genre_id, [["ケーキ", "ケーキ"], ["クッキー", "クッキー"], ["プリン・ゼリー", "プリン・ゼリー"], ["和菓子", "和菓子"]], include_blank: "選択して下さい" %></p>
+	  	<h4>販売ステータス</h4>
+		<label><%= f.radio_button :status, "販売中" %>販売中</label>
+		<label><%= f.radio_button :status, "売り切れ" %>売り切れ</label>
+	    <%= f.submit 'Update Items' %>
+	 <% end %>
+</div>

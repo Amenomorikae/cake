@@ -1,3 +1,26 @@
 <div class="container">
  <h1>商品一覧</h1>
+    <table class="table">
+		<thead class="thead bg-info text-white">
+			<tr>
+				<th scope="col">商品ID</th>
+				<th scope="col">商品名</th>
+				<th scope="col">税抜価格</th>
+				<th scope="col">ジャンル</th>
+				<th scope="col">販売ステータス</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @items.each do |item| %>
+				<tr>
+					<td><%= item.id %></td>
+					<td><%= item.name %></td>
+					<td>¥<%= item.price %></td>
+					<td><%= item.genre_id %></td>
+					<td><%= item.status %></td>
+					<td><button type="button" class="btn btn-danger"><%= link_to "Destroy", admins_item_path(item.id), method: :delete %></button></td>
+				</tr>
+		    <% end %>
+		</tbody>
+	</table>
 </div>
