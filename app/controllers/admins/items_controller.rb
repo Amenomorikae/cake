@@ -3,13 +3,17 @@ class Admins::ItemsController < ApplicationController
 		@items = Item.all
 	end
 
+	def show
+		@item = Item.find(params[:id])
+	end
+
 	def new
 		@item = Item.new
 	end
 
     def create
 		item = Item.new(item_params)
-        if item.save!
+        if item.save
 		  redirect_to admins_items_path(@item)
 		else
 			@item = item
@@ -17,8 +21,18 @@ class Admins::ItemsController < ApplicationController
 		end
 	end
 
+	def destroy
+		items = Item.find(params[:id])
+		if items.destroy
+			redirect_to admins_items_path(@item)
+	    else
+	    	@items = Item.all
+	    	render :index
+	    end
+	end
+
 	private
 	def item_params
-		params.require(:item).permit(:description, :genre_id, :price, :sales_status)
+		params.require(:item).permit(:name, :price, :genre_id, :status)
 	end
 end

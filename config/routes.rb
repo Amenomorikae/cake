@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 }
 
   namespace :admins do
-    resources :items,only: [:index, :new, :create, :update]
+    resources :items,only: [:index, :new, :show, :create, :update, :destroy]
     resources :end_users
   end
 
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   namespace :end_users do
    resources :tops,only: [:index]
-   resources :items
+   resources :items,only: [:index, :show]
   end
 
   root :to => 'tops#index'
