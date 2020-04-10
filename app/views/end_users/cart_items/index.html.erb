@@ -1,0 +1,7 @@
+<div class="conteiner">
+	<h2>ショッピングカート</h2>
+	<% @cart_items.each do |cart_item| %>
+      <%= cart_item.item.name %>
+      <%= cart_item.item.price %>
+    <% end %>
+</div>

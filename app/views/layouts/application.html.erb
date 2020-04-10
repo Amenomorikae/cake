@@ -23,10 +23,10 @@
                 <% if end_user_signed_in? %>
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item ">
-                    <a href="#">my_page</a>
+                    <%= link_to "my_page", end_users_path %>
                   </li>
                   <li class="nav-item ">
-                    <a href="#">cart</a>
+                    <%= link_to "商品一覧", end_users_items_path %>
                   </li>
                   <li class="nav-item ">
                     <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>

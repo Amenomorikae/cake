@@ -1,0 +1,22 @@
+<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @item.name %></td>
+				<td>¥<%= @item.price %></td>
+			</tr>
+		</tbody>
+	</table>
+
+    <%= form_for(@cart_item) do |f| %>
+     <%= f.hidden_field :item_id, :value => @item.id %>
+	 <%= button_to 'カートに入れる', end_users_cart_items_path(@cart_items) %>
+	<% end %>
+
+</div>

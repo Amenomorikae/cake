@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   namespace :end_users do
    resources :tops,only: [:index]
    resources :items,only: [:index, :show]
+   resources :cart_items
   end
 
   root :to => 'tops#index'

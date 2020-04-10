@@ -16,8 +16,10 @@
 					<td>¥<%= item.price %></td>
 					<td><%= item.genre_id %></td>
 					<td><%= item.status %></td>
-				</tr>
+					<td><%= link_to "詳細", end_users_item_path(item.id) %></td>
 		    <% end %>
+		        </tr>
+
 		</tbody>
 	</table>
 </div>
