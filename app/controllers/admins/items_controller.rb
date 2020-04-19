@@ -11,14 +11,27 @@ class Admins::ItemsController < ApplicationController
 		@item = Item.new
 	end
 
+	def edit
+		@item = Item.find(params[:id])
+	end
+
     def create
-		item = Item.new(item_params)
-        if item.save
+		@item = Item.new(item_params)
+        if @item.save
 		  redirect_to admins_items_path(@item)
 		else
 			@item = item
 			render :new
 		end
+	end
+
+	def update
+		@item = Item.find(params[:id])
+		if @item.update(item_params)
+	      redirect_to admins_item_path(@item)
+	    else
+	      render :edit
+	    end
 	end
 
 	def destroy
@@ -33,6 +46,6 @@ class Admins::ItemsController < ApplicationController
 
 	private
 	def item_params
-		params.require(:item).permit(:name, :price, :genre_id, :status)
+		params.require(:item).permit(:name, :price, :genre_id, :status, :description, :image)
 	end
 end

@@ -3,21 +3,22 @@
     <table class="table">
 		<thead class="thead bg-info text-white">
 			<tr>
+                <th scope="col"></th>
 				<th scope="col">商品名</th>
 				<th scope="col">税抜価格</th>
-				<th scope="col">ジャンル</th>
-				<th scope="col">販売ステータス</th>
+				<th scope="col"></th>
 			</tr>
 		</thead>
 		<tbody>
 			<% @items.each do |item| %>
 				<tr>
+					<td><%= attachment_image_tag item, :image, :fill, 100, 100, format: 'jpeg',fallback: "no_image.jpg" %></td>
 					<td><%= item.name %></td>
 					<td>¥<%= item.price %></td>
-					<td><%= item.genre_id %></td>
-					<td><%= item.status %></td>
-				</tr>
+					<td><%= link_to "詳細", end_users_item_path(item.id) %></td>
 		    <% end %>
+		        </tr>
+
 		</tbody>
 	</table>
 </div>
