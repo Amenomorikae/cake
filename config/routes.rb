@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 }
 
   namespace :admins do
-    resources :items,only: [:index, :new, :show, :create, :update, :destroy]
+    resources :items,only: [:index, :new, :show, :edit, :create, :update, :destroy]
     resources :end_users
   end
 
@@ -25,7 +25,11 @@ Rails.application.routes.draw do
   namespace :end_users do
    resources :tops,only: [:index]
    resources :items,only: [:index, :show]
-   resources :cart_items
+   resources :cart_items do
+    collection do
+    delete 'destroy_all'
+  end
+end
   end
 
   root :to => 'tops#index'
