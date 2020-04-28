@@ -27,9 +27,16 @@ Rails.application.routes.draw do
    resources :items,only: [:index, :show]
    resources :cart_items do
     collection do
-    delete 'destroy_all'
-  end
-end
+      delete 'destroy_all'
+    end
+   end
+   resources :orders,only: [:new, :index, :show, :create] do
+      collection do
+        get 'verification'
+        post 'verification'
+        get 'complete'
+      end
+    end
   end
 
   root :to => 'tops#index'

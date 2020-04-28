@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_17_011658) do
+ActiveRecord::Schema.define(version: 2020_04_23_082708) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "end_user_id"
+    t.string "postalcode"
+    t.string "street_address"
+    t.string "address"
+    t.string "postal_code"
+  end
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -40,6 +50,13 @@ ActiveRecord::Schema.define(version: 2020_04_17_011658) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name"
+    t.string "surname"
+    t.string "kana_surname"
+    t.string "kana_name"
+    t.string "postal_code"
+    t.string "street_address"
+    t.string "phone_number"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
@@ -56,6 +73,22 @@ ActiveRecord::Schema.define(version: 2020_04_17_011658) do
     t.integer "price"
     t.integer "status"
     t.string "image_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "end_user_id"
+    t.integer "postage"
+    t.integer "payment"
+    t.string "payment_method"
+    t.string "address"
+    t.string "name"
+    t.integer "order_status"
+    t.string "postal_code"
+    t.integer "total_price"
+    t.string "street_address"
+    t.integer "adress_btn"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
