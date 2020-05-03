@@ -12,7 +12,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
     	t.string :postal_code
     	t.integer :total_price
     	t.string :street_address
-    	t.integer :adress_btn
+    	t.integer :address_btn
 
       t.timestamps
     end

@@ -5,7 +5,7 @@ class EndUsers::CartItemsController < ApplicationController
 	end
 
 	def create
-		cart_items = CartItem.all
+		cart_items = CartItem.where(end_user_id: current_end_user.id)
 		isExist = false
 		id = 0
 		cart_items.each do |cart_item|

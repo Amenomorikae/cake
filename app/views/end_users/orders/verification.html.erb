@@ -32,7 +32,20 @@
 		</tr>
 		<tr>
 			<th>請求金額</th>
-			<th><%= @total_price %></th>
+			<th>¥<%= @total_price %></th>
 		</tr>
 	</table>
+
+	<div>
+		<%= form_for(@order, url:complete_end_users_orders_path) do |f| %>
+			<%= f.hidden_field :order_status, :value => Order.order_statuses.keys[0] %>
+			<%= f.hidden_field :total_price, :value => @total_price %>
+			<%= f.hidden_field :payment, :value => @order["payment"] %>
+			<%= f.hidden_field :postal_code, :value => @order["postal_code"] %>
+			<%= f.hidden_field :postage, :value => @postage %>
+			<%= f.hidden_field :address, :value => @order["address"] %>
+			<%= f.hidden_field :street_address,:value => @order["street_address"] %>
+			<%= f.submit "購入を確定する",class: "btn btn-bg btn-info" %>
+		<% end %>
+	</div>
 </div>
