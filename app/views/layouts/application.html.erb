@@ -47,6 +47,9 @@
                     <%=link_to "商品登録", new_admins_item_path %>
                   </li>
                   <li class="nav-item ">
+                    <%=link_to "注文一覧", admins_orders_path %>
+                  </li>
+                  <li class="nav-item ">
                     <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
                   </li>
                 </ul>

@@ -8,5 +8,6 @@ class Item < ApplicationRecord
     validates :description, presence: true
 
     has_many :cart_items
+    has_many :order_details
     attachment :image
 end

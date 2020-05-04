@@ -10,11 +10,13 @@ Rails.application.routes.draw do
   namespace :admins do
     resources :items,only: [:index, :new, :show, :edit, :create, :update, :destroy]
     resources :end_users
+    resources :orders,only: [:index, :show, :update]
+    resources :order_details,only: [:update]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resource :end_users,only: [ :show, :edit, :update, :confirm, :destroy]
+  resource :end_users,only: [:show, :edit, :update, :confirm, :destroy]
 
   devise_for :end_users,controllers: {
   sessions:      'end_users/sessions',
@@ -25,11 +27,19 @@ Rails.application.routes.draw do
   namespace :end_users do
    resources :tops,only: [:index]
    resources :items,only: [:index, :show]
+   resources :addresses
    resources :cart_items do
     collection do
-    delete 'destroy_all'
-  end
-end
+      delete 'destroy_all'
+    end
+   end
+   resources :orders,only: [:new, :index, :show, :create] do
+      collection do
+        get 'verification'
+        post 'vericreate'
+        get 'complete'
+      end
+    end
   end
 
   root :to => 'tops#index'
