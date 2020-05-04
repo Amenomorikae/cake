@@ -4,15 +4,12 @@ class CreateOrders < ActiveRecord::Migration[5.2]
 
     	t.integer :end_user_id
     	t.integer :postage
-    	t.integer :payment
-    	t.string :payment_method
+    	t.integer :payment_method
     	t.string :address
-    	t.string :name
-    	t.integer :order_status
+    	t.integer :order_status, default: 0
     	t.string :postal_code
     	t.integer :total_price
     	t.string :street_address
-    	t.integer :address_btn
 
       t.timestamps
     end

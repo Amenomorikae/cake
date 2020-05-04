@@ -15,6 +15,10 @@ class EndUsers::OrdersController < ApplicationController
 
 
 	def verification
+		if session[:order]["payment_method"] == nil || session[:address_btn] == nil
+            redirect_to new_end_users_order_path
+		end
+		
 		@order = session[:order]
 		@end_user = current_end_user
 		@postage = 1000
@@ -33,49 +37,80 @@ class EndUsers::OrdersController < ApplicationController
 	end
 
 	def create
-		order = Order.new(order_params)
-		order.end_user_id = current_end_user.id
+		order = Order.new(end_user_id: current_end_user.id,
+						  postage: 1000,
+						  payment_method: session[:order]["payment_method"],
+						  address: session[:order]["address"],
+						  postal_code: session[:order]["postal_code"],
+						  total_price: params[:order][:total_price],
+						  street_address: session[:order]["street_address"]
+		                  )
 		order.save
+		session[:order].clear
+
+		current_end_user.cart_items.each do |cart_item|
+			order_detail = OrderDetail.new
+			order_detail.item_id = cart_item.item.id
+			order_detail.order_id = order.id
+			order_detail.amount = cart_item.amount
+			order_detail.purchase_price = cart_item.item.price
+			order_detail.save
+		end
+
+		current_end_user.cart_items.destroy_all
+
+
 		redirect_to complete_end_users_orders_path
 	end
 
 
 	def vericreate
-		session[:order] = Order.new(verification_params)
+
+		session[:order] = Order.new(order_params)
 		session[:order][:end_user_id] = current_end_user.id
-		if session[:order]["address_btn"] == 1
+		if params["address_btn"].to_i == 1
 		   session[:order]["postal_code"] = current_end_user.postal_code
 		   session[:order]["street_address"] = current_end_user.street_address
 		   session[:order]["address"] = current_end_user.name
 	  
-		elsif session[:order]["address_btn"] == 2
-			street_address = current_end_user.addresses.find_by(street_address: session[:order]["address_info"])
-			session[:order]["postal_code"] = street_address.postal_code
-			session[:order]["street_address"] = street_address.street_address
-			session[:order]["address"] = street_address.address
+		elsif params["address_btn"].to_i == 2
+			address = Address.find(params[:order][:address_info])
+			session[:order]["postal_code"] = address.postal_code
+			session[:order]["street_address"] = address.street_address
+			session[:order]["address"] = address.address
 		else   
 			address = Address.new(address_params)
 			address.end_user_id = current_end_user.id
 			address.save
+
+			session[:order]["postal_code"] = address.postal_code
+			session[:order]["street_address"] = address.street_address
+			session[:order]["address"] = address.address
 		end
+		
+		session[:address_btn] = params[:address_btn]
+		session[:order][:end_user_id] = current_end_user.id
+		session[:order]["postage"] = 1000
+		session[:order]["payment_method"] = order_params[:payment_method]
+
 		redirect_to verification_end_users_orders_path
 	end
 
 	def complete
-
+		@order = Order.all
 	end
 
     private
 	def address_params
-		params.require(:order).permit(:end_user_id, :street_address, :postal_code, :address)
+		params.require(:address).permit(:end_user_id, :street_address, :postal_code, :address)
 	end
 
 	def verification_params
-		params.require(:order).permit(:end_user_id, :address_btn, :payment, :street_address, :postal_code, :address)
+		params.require(:order).permit(:end_user_id, :order_status, :total_price, :payment, :postal_code, :postage, :address, :street_address)
 	end
 
 	def order_params
-		params.require(:order).permit(:end_user_id, :order_status, :total_price, :payment, :postal_code, :postage, :address, :street_address)
+		params.require(:order).permit(:end_user_id, :address_btn, :payment, :street_address, :postal_code, :address, :payment_method)
 	end
 
 end

@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2020_05_02_123301) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "end_user_id"
-    t.string "postalcode"
     t.string "street_address"
     t.string "address"
     t.string "postal_code"
@@ -30,7 +29,6 @@ ActiveRecord::Schema.define(version: 2020_05_02_123301) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
@@ -57,22 +55,23 @@ ActiveRecord::Schema.define(version: 2020_05_02_123301) do
     t.string "street_address"
     t.string "phone_number"
     t.string "address"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_end_users_on_deleted_at"
     t.index ["email"], name: "index_end_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_end_users_on_reset_password_token", unique: true
   end
 
   create_table "items", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "name"
     t.text "description"
     t.integer "genre_id"
     t.integer "price"
-    t.integer "status"
+    t.integer "status", default: 0
     t.string "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "order_details", force: :cascade do |t|
@@ -82,24 +81,20 @@ ActiveRecord::Schema.define(version: 2020_05_02_123301) do
     t.integer "order_id"
     t.integer "amount"
     t.integer "purchase_price"
-    t.integer "make_status"
+    t.integer "make_status", default: 0
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer "end_user_id"
     t.integer "postage"
-    t.integer "payment"
-    t.string "payment_method"
+    t.integer "payment_method"
     t.string "address"
-    t.string "name"
-    t.integer "order_status"
+    t.integer "order_status", default: 0
     t.string "postal_code"
     t.integer "total_price"
     t.string "street_address"
-    t.integer "address_btn"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "address_info"
   end
 
 end

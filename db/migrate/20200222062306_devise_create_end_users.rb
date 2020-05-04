@@ -39,11 +39,13 @@ class DeviseCreateEndUsers < ActiveRecord::Migration[5.2]
       t.string :street_address
       t.string :phone_number
       t.string :address
+      t.datetime :deleted_at
 
 
       t.timestamps null: false
     end
 
+    add_index :end_users, :deleted_at
     add_index :end_users, :email,                unique: true
     add_index :end_users, :reset_password_token, unique: true
     # add_index :end_users, :confirmation_token,   unique: true

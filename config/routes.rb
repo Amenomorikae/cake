@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :items,only: [:index, :new, :show, :edit, :create, :update, :destroy]
     resources :end_users
     resources :orders,only: [:index, :show, :update]
+    resources :order_details,only: [:update]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

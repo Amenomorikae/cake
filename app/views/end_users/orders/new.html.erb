@@ -1,6 +1,6 @@
 <div class="container">
 	<h4>購入情報入力</h4>
-	<%= form_for(@order, url: verification_end_users_orders_path) do |f| %>
+	<%= form_for(@order, url: vericreate_end_users_orders_path) do |f| %>
 	  <div>
 	    <h5>支払方法</h5>
 		<label><%= f.radio_button :payment_method, :クレジットカード %>クレジットカード</label>
@@ -9,7 +9,7 @@
 	  <div>
 		  <div>
 			<h5>お届け先</h5>
-			<label><%= f.radio_button :address_btn, 1 %>ご自身の住所</label>
+			<label><%= radio_button_tag :address_btn, 1 %>ご自身の住所</label>
 			<div>
 				<%= current_end_user.street_address%>
 				<%= current_end_user.postal_code %>
@@ -18,13 +18,13 @@
 		    </div>
 		  </div>
 		  <div>
-	        <label><%= f.radio_button :address_btn, 2 %>登録済住所から選択</label>
+	        <label><%= radio_button_tag :address_btn, 2 %>登録済住所から選択</label>
 		        <div>
-			        <%= f.collection_select(:address_info, current_end_user.addresses.all, :street_address, :street_address, include_blank: "選択して下さい") %>
+			        <%= f.collection_select(:address, current_end_user.addresses.all, :id, :full_address, include_blank: "選択して下さい") %>
 			    </div>
 		  </div>
 		  <div>
-		    <label><%= f.radio_button :address_btn, 3 %>新しいお届け先</label>
+		    <label><%= radio_button_tag :address_btn, 3 %>新しいお届け先</label>
 		    <div>
 		        <label>郵便番号<%= f.text_field :postal_code %>ハイフンなし</label>
 		        <label>住所<%= f.text_field :street_address %></label>

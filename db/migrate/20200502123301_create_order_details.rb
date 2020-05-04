@@ -7,7 +7,7 @@ class CreateOrderDetails < ActiveRecord::Migration[5.2]
       t.integer :order_id
       t.integer :amount
       t.integer :purchase_price
-      t.integer :make_status
+      t.integer :make_status, default: 0
     end
   end
 end
