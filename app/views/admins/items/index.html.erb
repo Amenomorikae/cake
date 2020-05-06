@@ -5,7 +5,7 @@
 			<tr>
 				<th scope="col">商品ID</th>
 				<th scope="col">商品名</th>
-				<th scope="col">税抜価格</th>
+				<th scope="col">税込価格</th>
 				<th scope="col">ジャンル</th>
 				<th scope="col">販売ステータス</th>
 				<th scope="col"></th>
@@ -13,11 +13,11 @@
 			</tr>
 		</thead>
 		<tbody>
-			<% @items.each do |item| %>
+			<% @search_items.each do |item| %>
 				<tr>
 					<td><%= item.id %></td>
 					<td><%= item.name %></td>
-					<td>¥<%= item.price %></td>
+					<td>¥<%= (item.price*1.1).round %></td>
 					<td><%= item.genre_id %></td>
 					<td><%= item.status %></td>
 					<td><button type="button" class="btn btn-warning"><%= link_to "詳細", admins_item_path(item.id) %></td></button>
