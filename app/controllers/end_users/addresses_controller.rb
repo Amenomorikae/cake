@@ -8,7 +8,7 @@ class EndUsers::AddressesController < ApplicationController
         address = Address.new(address_params)
         address.end_user_id = current_end_user.id
         if address.save
-            redirect_to end_users_addresses_path(current_end_user.id)
+            redirect_to end_users_addresses_path
         else
             ＠address = address
             @addresses = Address.all
