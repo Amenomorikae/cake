@@ -14,7 +14,7 @@ class EndUsers::OrdersController < ApplicationController
 	end
 
 
-	def verification
+	def verification 
 		if session[:order]["payment_method"] == nil || session[:address_btn] == nil
             redirect_to new_end_users_order_path
 		end
@@ -27,7 +27,7 @@ class EndUsers::OrdersController < ApplicationController
 	    current_end_user.cart_items.each do |cart_item|
 	      price = 0
 	      price = cart_item.item.price * cart_item.amount
-	      @prices = @prices + cart_item.item.price
+	      @prices = @prices + price
 	      @total_price = @total_price + price
 	    end
 	    @prices = (@prices * 1.10).round
@@ -42,7 +42,7 @@ class EndUsers::OrdersController < ApplicationController
 						  payment_method: session[:order]["payment_method"],
 						  address: session[:order]["address"],
 						  postal_code: session[:order]["postal_code"],
-						  total_price: params[:order][:total_price],
+						  total_price: params[:order]["total_price"],
 						  street_address: session[:order]["street_address"]
 		                  )
 		order.save
@@ -65,7 +65,7 @@ class EndUsers::OrdersController < ApplicationController
 
 
 	def vericreate
-
+        
 		session[:order] = Order.new(order_params)
 		session[:order][:end_user_id] = current_end_user.id
 		if params["address_btn"].to_i == 1
@@ -74,11 +74,14 @@ class EndUsers::OrdersController < ApplicationController
 		   session[:order]["address"] = current_end_user.name
 	  
 		elsif params["address_btn"].to_i == 2
-			address = Address.find(params[:order][:address_info])
+			#binding.pry
+			address = Address.find(params[:address]["address_id"])
 			session[:order]["postal_code"] = address.postal_code
 			session[:order]["street_address"] = address.street_address
 			session[:order]["address"] = address.address
-		else   
+
+		else params["address_btn"].to_i == 3
+			#binding.pry  
 			address = Address.new(address_params)
 			address.end_user_id = current_end_user.id
 			address.save
@@ -102,7 +105,7 @@ class EndUsers::OrdersController < ApplicationController
 
     private
 	def address_params
-		params.require(:address).permit(:end_user_id, :street_address, :postal_code, :address)
+		params.require(:order).permit(:street_address, :postal_code, :address)
 	end
 
 	def verification_params
@@ -110,7 +113,7 @@ class EndUsers::OrdersController < ApplicationController
 	end
 
 	def order_params
-		params.require(:order).permit(:end_user_id, :address_btn, :payment, :street_address, :postal_code, :address, :payment_method)
+		params.require(:order).permit(:end_user_id, :street_address, :postal_code, :address, :payment_method)
 	end
 
 end

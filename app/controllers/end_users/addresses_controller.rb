@@ -17,6 +17,6 @@ class EndUsers::AddressesController < ApplicationController
     end
 
     def address_params
-        params.require(:address).permit(:postalcode, :street_address, :address)
+        params.require(:address).permit(:postal_code, :street_address, :address)
     end
 end
