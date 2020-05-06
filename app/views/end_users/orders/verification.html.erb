@@ -38,6 +38,13 @@
 	</table>
 
 	<div>
+	 <h2>支払方法</h2>
+	 <label><%= session[:order]["payment_method"] %></label>
+	 <h2>お届け先</h2>
+	 <label><%= session[:order]["postal_code"] %><%= session[:order]["street_address"] %><%= session[:order]["address"] %></label>
+	</div>
+
+	<div>
 		<%= form_for(@order, url:end_users_orders_path) do |f| %>
 			<%= f.hidden_field :order_status, :value => Order.order_statuses.keys[0] %>
 			<%= f.hidden_field :total_price, :value => @total_price %>
