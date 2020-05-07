@@ -1,6 +1,6 @@
 class Admins::ItemsController < ApplicationController
 	def index
-		@search_items = Item.all
+        @search_items = @search.result
 	end
 
 	def show
