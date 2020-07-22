@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_24_051827) do
+ActiveRecord::Schema.define(version: 2020_05_02_123301) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "end_user_id"
+    t.string "street_address"
+    t.string "address"
+    t.string "postal_code"
+  end
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,9 +29,16 @@ ActiveRecord::Schema.define(version: 2020_03_24_051827) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "end_user_id"
+    t.integer "item_id"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "end_users", force: :cascade do |t|
@@ -32,11 +48,53 @@ ActiveRecord::Schema.define(version: 2020_03_24_051827) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name"
+    t.string "surname"
+    t.string "kana_surname"
+    t.string "kana_name"
+    t.string "postal_code"
+    t.string "street_address"
+    t.string "phone_number"
+    t.string "address"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_end_users_on_deleted_at"
     t.index ["email"], name: "index_end_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_end_users_on_reset_password_token", unique: true
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "genre_id"
+    t.integer "price"
+    t.integer "status", default: 0
+    t.string "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "order_details", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "item_id"
+    t.integer "order_id"
+    t.integer "amount"
+    t.integer "purchase_price"
+    t.integer "make_status", default: 0
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "end_user_id"
+    t.integer "postage"
+    t.integer "payment_method"
+    t.string "address"
+    t.integer "order_status", default: 0
+    t.string "postal_code"
+    t.integer "total_price"
+    t.string "street_address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

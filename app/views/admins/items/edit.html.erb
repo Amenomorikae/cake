@@ -1,0 +1,18 @@
+<div class="container">
+	<%= form_for(@item, url: admins_item_path) do |f| %>
+	    <h4>商品画像</h4>
+	    <p><%= f.attachment_field :image %></p>
+      	<h4>商品名</h4>
+	    <p><%= f.text_field :name %></p>
+	    <h4>商品説明</h4>
+	    <p><%= f.text_area :description %></p>
+	    <h4>税抜価格</h4>
+	  	<p><%= f.text_field :price %></p>
+	  	<h4>ジャンル</h4>
+	  	<p><%= f.select :genre_id, [["ケーキ", "ケーキ"], ["クッキー", "クッキー"], ["プリンゼリー", "プリンゼリー"], ["和菓子", "和菓子"]], include_blank: "選択して下さい" %></p>
+	  	<h4>販売ステータス</h4>
+		<label><%= f.radio_button :status, "販売中" %>販売中</label>
+		<label><%= f.radio_button :status, "売り切れ" %>売り切れ</label>
+	    <%= f.submit 'Update Items' %>
+	<% end %>
+</div>
