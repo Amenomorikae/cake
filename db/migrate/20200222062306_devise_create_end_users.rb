@@ -32,11 +32,20 @@ class DeviseCreateEndUsers < ActiveRecord::Migration[5.2]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
       t.string :name
+      t.string :surname
+      t.string :kana_surname
+      t.string :kana_name
+      t.string :postal_code
+      t.string :street_address
+      t.string :phone_number
+      t.string :address
+      t.datetime :deleted_at
 
 
       t.timestamps null: false
     end
 
+    add_index :end_users, :deleted_at
     add_index :end_users, :email,                unique: true
     add_index :end_users, :reset_password_token, unique: true
     # add_index :end_users, :confirmation_token,   unique: true
