@@ -5,17 +5,48 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true, autocomplete: "Name" %>
+      <%= f.label :surname, "姓" %><br />
+      <%= f.text_field :surname, autofocus: true, autocomplete: "姓" %>
     </div>
 
     <div class="field">
-      <%= f.label :email %><br />
+      <%= f.label :name, "名" %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "名" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :kana_surname, "カナ姓" %><br />
+      <%= f.text_field :kana_surname, autofocus: true, autocomplete: "カナ姓" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :kana_name, "カナ名" %><br />
+      <%= f.text_field :kana_name, autofocus: true, autocomplete: "カナ名" %>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :email, "メール" %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
     <div class="field">
-      <%= f.label :password %>
+      <%= f.label :postal_code, "郵便番号" %><br />
+      <%= f.text_field :postal_code, autofocus: true, autocomplete: "郵便番号" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :street_address, "住所" %><br />
+      <%= f.text_field :street_address, autofocus: true, autocomplete: "住所" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone_number, "電話番号" %><br />
+      <%= f.text_field :phone_number, autofocus: true, autocomplete: "電話番号" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password, "パスワード" %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
@@ -23,7 +54,7 @@
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :password_confirmation, "パスワード再確認" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
